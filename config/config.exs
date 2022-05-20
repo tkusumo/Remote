@@ -31,7 +31,7 @@ config :esbuild,
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id],
-  log_level: [:error]
+  level: :error
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
