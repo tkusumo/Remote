@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # The directory Mix will write compiled artifacts to.
 /_build/
 
@@ -32,3 +33,15 @@ remote-*.tar
 npm-debug.log
 /assets/node_modules/
 
+=======
+/_build
+/cover
+/deps
+/doc
+/.fetch
+erl_crash.dump
+*.ez
+*.beam
+/config/*.secret.exs
+.elixir_ls/
+>>>>>>> 4b7e95b412a04c743007ca00d9c701395741bd9a

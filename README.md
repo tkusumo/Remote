@@ -1,4 +1,5 @@
 # Remote
+<<<<<<< HEAD
 
 To start your Phoenix server:
 
@@ -17,3 +18,6 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Docs: https://hexdocs.pm/phoenix
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
+=======
+Remote code exercise
+>>>>>>> 4b7e95b412a04c743007ca00d9c701395741bd9a
