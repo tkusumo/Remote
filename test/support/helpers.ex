@@ -1,4 +1,8 @@
 defmodule Remote.Helpers do
+  @moduledoc """
+    Helper functions
+  """
+
   alias Remote.Contexts.Users
 
   def setup_users(count) do
