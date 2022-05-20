@@ -59,6 +59,7 @@ defmodule Remote.Contexts.Users do
     |> gt_max_number_query(max_num)
     |> with_limit_query(limit)
     |> select_id_and_points()
+    |> random_order()
     |> Repo.all()
   end
 
@@ -76,6 +77,11 @@ defmodule Remote.Contexts.Users do
   defp with_limit_query(query, limit) do
     query
     |> limit([_u], ^limit)
+  end
+
+  defp random_order(query) do
+    query
+    |> order_by([_u], fragment("random()"))
   end
 
   defp select_id_and_points(query) do
