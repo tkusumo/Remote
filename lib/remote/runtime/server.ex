@@ -7,7 +7,7 @@ defmodule Remote.Runtime.Server do
 
   @type t :: %__MODULE__{
           max_number: integer,
-          timestamp: DateTime.t()
+          timestamp: String.t()
         }
 
   @time_interval 60_000
@@ -50,10 +50,16 @@ defmodule Remote.Runtime.Server do
 
     state =
       state
-      |> Map.put(:timestamp, DateTime.utc_now())
+      |> Map.put(:timestamp, format_timestamp(DateTime.utc_now()))
 
     {:reply, return, state}
   end
 
   def handle_call(:server_state, _from, state), do: {:reply, state, state}
+
+  defp format_timestamp(ts) do
+    ts
+    |> DateTime.to_string()
+    |> String.slice(0..18)
+  end
 end
